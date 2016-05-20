@@ -37,6 +37,19 @@ barrels.forEach((barrelName: string) => {
   cliSystemConfigPackages[barrelName] = { main: 'index' };
 });
 
+const materials: any = [
+  { name: '@angular2-material/core', component : 'core'},
+  { name: '@angular2-material/checkbox', component : 'checkbox'}
+];
+
+materials.forEach((pkg: any) =>{
+  cliSystemConfigPackages[pkg.name] = {
+    format:'cjs',
+    defaultExtension:'js',
+    main: pkg.component + '.js'
+  };
+});
+
 /** Type declaration for ambient System. */
 declare var System: any;
 
@@ -44,6 +57,7 @@ declare var System: any;
 System.config({
   map: {
     '@angular': 'vendor/@angular',
+    '@angular2-material': 'vendor/@angular2-material',
     'rxjs': 'vendor/rxjs',
     'main': 'main.js'
   },
