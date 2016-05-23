@@ -2,4 +2,14 @@
   {{title}}
 </h1>
 
-<md-checkbox>TEST</md-checkbox>
+<!--<md-checkbox>Good stuff</md-checkbox>-->
+<button md-raised-button color="warn" (click)="g.show('nu title here','')">Show Growl</button>
+<hr>
+<card>card</card>
+<card>card</card>
+<card>card</card>
+
+
+
+
+<growl #g [title]="growl.title" [message]="growl.message" ></growl>

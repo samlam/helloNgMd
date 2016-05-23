@@ -29,6 +29,8 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
+  'app/card',
+  'app/growl',
   /** @cli-barrel */
 ];
 
@@ -39,7 +41,8 @@ barrels.forEach((barrelName: string) => {
 
 const materials: any = [
   { name: '@angular2-material/core', component : 'core'},
-  { name: '@angular2-material/checkbox', component : 'checkbox'}
+  { name: '@angular2-material/checkbox', component : 'checkbox'},
+  { name: '@angular2-material/button', component : 'button'}
 ];
 
 materials.forEach((pkg: any) =>{
