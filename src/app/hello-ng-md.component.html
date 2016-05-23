@@ -5,10 +5,9 @@
 <!--<md-checkbox>Good stuff</md-checkbox>-->
 <button md-raised-button color="warn" (click)="g.show('nu title here','')">Show Growl</button>
 <hr>
-<card>card</card>
-<card>card</card>
-<card>card</card>
-
+<div *ngFor="let c of cards">
+  <card>card</card>
+</div>
 
 
 

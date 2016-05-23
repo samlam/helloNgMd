@@ -11,6 +11,7 @@ export class GrowlComponent implements OnInit {
   @Input() message :string ;
   @Input() title :string;
   @Input() timeout :number = 5000;
+  private lastTimeout :any;
   constructor() {
  
   }
@@ -28,7 +29,10 @@ export class GrowlComponent implements OnInit {
     this.title = (newTitle == undefined)? this.title: newTitle;
     this.message = (msg == undefined)? this.message: msg;
     this.visible = true;
-    setTimeout(() => {
+    if (this.lastTimeout != undefined){
+      clearTimeout(this.lastTimeout);
+    }
+    this.lastTimeout = setTimeout(() => {
       this.hide();
     }, this.timeout);
   }

@@ -17,5 +17,5 @@ export class HelloNgMdAppComponent {
     title : "title",
     message : "msg"
   };
-  
+  cards :string[] = ['','','','','',''];
 }
